@@ -36,9 +36,14 @@ export default {
   },
   methods:{
       a(){
+        console.log(this.$store.state.count);//获取vuex里的值
+        this.$store.commit('increment')
+        console.log(this.$store.state.count) // -> 1
+
         console.log($("#li"));
         console.log(a.test());
         this.$router.push("/test");//跳转路由
+        
         $.ajax({
           url:'',
           data:{},
